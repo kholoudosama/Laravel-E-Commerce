@@ -24,7 +24,7 @@ Add Category
                                   </div>
                              @endif
 
-                             {!!Form::open(['action' => 'ProductController' ,'class' => 'cmxform' ,'method' => 'POST','id' => 'commentForm' ])!!}
+                             {!!Form::open(['action' => 'CategoryController@savecategory' ,'class' => 'cmxform' ,'method' => 'POST','id' => 'commentForm' ])!!}
                              {{csrf_field()}}
                            <div class="form-group">
                              {{Form::label( '' ,'Add Category',['for' => 'cname'] )}}

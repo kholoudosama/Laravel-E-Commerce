@@ -40,9 +40,9 @@ class ProductController extends Controller
              // 2 ====== git file name from path =======
              $fileName=pathinfo($fileNameWithExt,PATHINFO_FILENAME);
              // 3 ====== gitfile Extention =======    File['extention'] 
-             $extention=$request->file('product_image')->getClientOriginalExtension();
+             $extension=$request->file('product_image')->getClientOriginalExtension();
              // 4 ====== store file ======= 
-             $fileNameToStore=$fileName.'_'.time().'.' . $extention;
+             $fileNameToStore=$fileName.'_'.time().'.' . $extension;
              // 4 ====== uplode file=======      store at -->storage - app -puplic
              $path=$request->file('product_image')->storeAs('public/product_images',$fileNameToStore);
      }else{

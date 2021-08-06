@@ -22,17 +22,19 @@ Route::get('/shop', 'ClientController@shop' );
 Route::get('/checkout', 'ClientController@checkout' );
 Route::get('/login', 'ClientController@login' );
 Route::get('/signup', 'ClientController@signup' );
+Route::post('/createaccount', 'ClientController@createaccount' ); 
+Route::post('/accsesaccount', 'ClientController@accsesaccount' );
+Route::get('/logout', 'ClientController@logout' ); 
+
 
 Route::get('/admin', 'AdminController@dashboard' );   
 Route::get('/orders', 'AdminController@orders' );     
 
-
-Route::get('/categories', 'CategoryController@categories' );
 Route::get('/addcategory', 'CategoryController@addcategory' );  
+Route::get('/categories', 'CategoryController@categories' );
 Route::post('/savecategory', 'CategoryController@savecategory' );   //post --> save data in DB
 Route::get('/edit_category/{id}', 'CategoryController@edit' );   //post --> save data in DB
 Route::get('/delete/{id}', 'CategoryController@delete' );   //--> save data in DB
-
 Route::post('/updatecategory', 'CategoryController@updatecategory' );   //post --> update data in DB
 
 
